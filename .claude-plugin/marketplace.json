@@ -1,14 +1,14 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "claudinho-harness",
+  "name": "ashen-harness",
   "description": "Personal Claude Code slash commands: /spike, /plan, /task — domain-routed builder pipeline with advisory reviewer",
   "owner": {
-    "name": "thiago18coutinho",
-    "url": "https://github.com/thiago18coutinho"
+    "name": "Coutinho306",
+    "url": "https://github.com/Coutinho306"
   },
   "plugins": [
     {
-      "name": "claudinho-harness",
+      "name": "ashen-harness",
       "description": "Personal Claude Code slash commands: /spike, /plan, /task — domain-routed builder pipeline with advisory reviewer",
       "source": "./"
     }
