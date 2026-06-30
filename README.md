@@ -21,7 +21,7 @@ Personal Claude Code slash commands for a domain-routed builder pipeline:
 ### 1. Register the marketplace
 
 ```
-claude plugin marketplace add thiago18coutinho/claudinho-harness
+claude plugin marketplace add Coutinho306/claudinho-harness
 ```
 
 ### 2. Install the plugin
