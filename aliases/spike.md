@@ -1,6 +1,6 @@
 ---
-description: "Alias for claudinho-harness:spike"
+description: "Alias for ashen-harness:spike"
 argument-hint: "<topic | slug>"
 ---
 
-/claudinho-harness:spike $ARGUMENTS
+/ashen-harness:spike $ARGUMENTS

@@ -1,6 +1,6 @@
 ---
-description: "Alias for claudinho-harness:plan"
+description: "Alias for ashen-harness:plan"
 argument-hint: "<topic | slug>"
 ---
 
-/claudinho-harness:plan $ARGUMENTS
+/ashen-harness:plan $ARGUMENTS

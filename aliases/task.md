@@ -1,6 +1,6 @@
 ---
-description: "Alias for claudinho-harness:task"
+description: "Alias for ashen-harness:task"
 argument-hint: "<slug>"
 ---
 
-/claudinho-harness:task $ARGUMENTS
+/ashen-harness:task $ARGUMENTS
