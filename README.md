@@ -79,6 +79,19 @@ claude plugin install ashen-harness@ashen-harness --scope local
 
 No restart required — `/reload-plugins` picks up changes immediately.
 
+## Uninstall
+
+```
+claude plugin uninstall ashen-harness@ashen-harness
+claude plugin marketplace remove ashen-harness
+```
+
+If you added bare-name aliases (below), also remove them:
+
+```
+rm ~/.claude/commands/spike.md ~/.claude/commands/plan.md ~/.claude/commands/task.md
+```
+
 ## Bare-name aliases (`/spike` instead of `/ashen-harness:spike`)
 
 Marketplace-installed plugin commands are invoked with a `ashen-harness:` prefix
