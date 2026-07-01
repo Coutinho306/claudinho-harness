@@ -17,13 +17,13 @@ Resolve slug: if arg is already kebab-case with no spaces, use as-is; else conve
 
 Probe `specs/spikes/<slug>/STATUS.md`:
 - If exists: read it. If `overall_status: done`, report "already done" + SPIKE.md path and stop.
-- If exists and `overall_status: in_progress` and `input_hash` matches: resume from first unchecked step.
+- If exists and `overall_status: in_progress` and `source_hash` matches: resume from first unchecked step.
 - Else: bootstrap STATUS.md from template at `${CLAUDE_PLUGIN_ROOT}/templates/STATUS.md`, filling:
   - `slug`: resolved slug
   - `command`: spike
   - `overall_status`: in_progress
   - `last_updated`: now (YYYY-MM-DD HH:MM)
-  - `input_hash`: sha256 of (topic + alphabetically-sorted cwd_hints joined with `,`)
+  - `source_hash`: sha256 of (topic + alphabetically-sorted cwd_hints joined with `,`)
   - Steps: 1. Pre-fetch + bootstrap / 2. Route domain / 3. Delegate researcher / 4. Verify + finalize
 
 Probe cwd hints (run these in parallel, capture file existence as list):
@@ -47,7 +47,7 @@ Emit the routing log block:
    slug:    <slug>
    domain:  <domain>
    target:  specs/spikes/<slug>/SPIKE.md
-   hash:    <first 8 chars of input_hash>
+   hash:    <first 8 chars of source_hash>
 ```
 
 Mark Step 2 `[x]` in STATUS.md.

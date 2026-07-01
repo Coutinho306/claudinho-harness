@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# AIDEV-NOTE: SubagentStop hook — auto-detects stack and runs tests after
+# NOTE: SubagentStop hook — auto-detects stack and runs tests after
 # implementation agents (ashen-ai-eng-builder, ashen-data-eng-builder,
 # ashen-infra-ops-builder, ashen-generalist-builder) finish.
 # Wire via hooks/hooks.json with matcher matching builder agent names.
@@ -30,7 +30,7 @@ if [[ -n "$PROFILE_CMD" ]]; then
 elif [[ -f bun.lockb || -f bun.lock ]]; then
   run bun test
 elif [[ -f package.json ]]; then
-  # AIDEV-NOTE: prefer jq to gate on scripts.test, but Node projects without
+  # NOTE: prefer jq to gate on scripts.test, but Node projects without
   # jq still get a best-effort npm test rather than a silent skip.
   if command -v jq &>/dev/null; then
     if jq -e '.scripts.test' package.json &>/dev/null; then

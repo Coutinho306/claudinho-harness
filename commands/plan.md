@@ -21,7 +21,7 @@ Run these probes in parallel:
 - `ls pyproject.toml dbt_project.yml *.tf Dockerfile 2>/dev/null`
 - `grep -rl "langgraph\|langchain\|openai\|anthropic\|llm\|embed" . --include="*.py" --exclude-dir=".venv" 2>/dev/null | head -5`
 
-Compute `input_hash = sha256(topic + spike_content)` (first 8 chars for display).
+Compute `source_hash = sha256(topic + spike_content)` (first 8 chars for display).
 
 STATUS.md logic:
 - If STATUS exists and `overall_status: done` → report "already done" + paths and stop.
@@ -31,7 +31,7 @@ STATUS.md logic:
   - `command`: plan
   - `overall_status`: in_progress
   - `last_updated`: now (YYYY-MM-DD HH:MM)
-  - `input_hash`: computed hash
+  - `source_hash`: computed hash
   - Steps: 1. Pre-fetch + bootstrap / 2. Specifier → SPEC.md / 3. Checkpoint / 4. Planner → PLAN.md
 
 Create `specs/features/<slug>/` directory if absent.

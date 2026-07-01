@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# AIDEV-NOTE: SessionStart hook — self-learning .claude/context.json updater.
+# NOTE: SessionStart hook — self-learning .claude/context.json updater.
 # Detects active feature from current branch and infers test command from
 # project layout, then writes them to context.json non-destructively.
 # Idempotent: developer-set fields are never overwritten; only missing fields
 # are filled. Re-runs each session so renamed branches stay in sync.
 #
-# AIDEV-DECISION: jq is preferred but optional. Python3 fallback covers
+# WHY: jq is preferred but optional. Python3 fallback covers
 # environments where jq may be absent. Both branches preserve existing keys
 # via in-place merge.
 set -euo pipefail

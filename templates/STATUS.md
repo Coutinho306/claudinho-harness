@@ -3,7 +3,7 @@ slug: <kebab>
 command: spike | plan | task
 overall_status: in_progress
 last_updated: YYYY-MM-DD HH:MM
-input_hash: <sha256>
+source_hash: <sha256>
 ---
 
 ## Steps

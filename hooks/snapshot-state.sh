@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# AIDEV-NOTE: PreCompact hook — persists pipeline state before context
+# NOTE: PreCompact hook — persists pipeline state before context
 # compaction so long-running pipelines (/spike, /plan, /task) survive
 # compression and can be resumed. Reads CLAUDE_PIPELINE_* env vars exported
 # by the active command; no-op when none are set (compaction outside a
